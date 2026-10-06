@@ -1,1 +1,14 @@
 @use './shared/sass/base' as *;
+@use './shared/sass/abstracts' as *;
+
+/* Global layout and scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the app fills the viewport */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

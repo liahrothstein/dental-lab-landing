@@ -1,0 +1,10 @@
+@use '../../../shared/sass/abstracts/colors' as *;
+
+.services-section {
+  background: var(--surface);
+  min-height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

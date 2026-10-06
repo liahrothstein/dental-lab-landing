@@ -1,1 +1,39 @@
+// Typography and utility classes
+@use '../abstracts/colors' as *;
 
+// Global body styling
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  background-color: var(--bg);
+  line-height: 1.6;
+}
+
+// Heading styles (serif from Playfair Display)
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(40px, 5vw, 64px);
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin: 0;
+}
+
+// Utility container class for centered content
+.container {
+  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}

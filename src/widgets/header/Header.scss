@@ -1,0 +1,68 @@
+/* Header styles */
+@use '../../shared/sass/abstracts/colors' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--text);
+
+  .lab {
+    color: var(--accent-gold);
+  }
+}
+
+.nav {
+  ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+
+      &:hover {
+        color: var(--accent-strong);
+      }
+    }
+  }
+}
+
+.contact-btn {
+  a {
+    background: var(--accent);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:hover {
+      background: var(--accent-strong);
+    }
+  }
+}
+
+/* Mobile hide nav on narrow screens */
+@media (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+}

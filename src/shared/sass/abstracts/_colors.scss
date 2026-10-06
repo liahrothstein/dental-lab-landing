@@ -1,5 +1,30 @@
-$black: #000000;
-$white: #ffffff;
+// Color palette and CSS custom properties for the application
+// Using SCSS variables for potential future use, but the primary
+// theme is exposed through CSS custom properties in :root.
 
-$defaultLinkColor: $black;
-// $activeLinkColor: $dodgerBlue;
+// SCSS variables (optional, can be used in future components if needed)
+$bg: #FDFCFA;
+$surface: #F4F7F2;
+$text: #10231A;
+$text-muted: #5C6B60;
+$accent: #2E8B4A;
+$accent-strong: #1C6B38;
+$accent-gold: #A9A23F;
+$line: #DFE7DD;
+$dark: #0E2018;
+// gradient used for CTA buttons and decorative elements
+$grad-shell: linear-gradient(135deg, #1C6B38 0%, #2E8B4A 45%, #6FB25D 70%, #A9A23F 100%);
+
+// CSS custom properties exposed globally via :root
+:root {
+  --bg: #FDFCFA;
+  --surface: #F4F7F2;
+  --text: #10231A;
+  --text-muted: #5C6B60;
+  --accent: #2E8B4A;
+  --accent-strong: #1C6B38;
+  --accent-gold: #A9A23F;
+  --line: #DFE7DD;
+  --dark: #0E2018;
+  --grad-shell: linear-gradient(135deg, #1C6B38 0%, #2E8B4A 45%, #6FB25D 70%, #A9A23F 100%);
+}
