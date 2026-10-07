@@ -1,3 +1,16 @@
-@forward './normalize';
-@forward './reset';
-@forward './typography';
+@use './normalize';
+@use './reset';
+@use './typography';
+@use './buttons';
+
+/* Global layout and scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure the app fills the viewport */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

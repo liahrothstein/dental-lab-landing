@@ -1,0 +1,32 @@
+/* Button base styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+.btn--primary {
+  background: var(--grad-shell);
+  color: #fff;
+
+  &:hover {
+    background: var(--accent-strong);
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  border: 1px solid var(--accent-strong);
+  color: var(--accent-strong);
+
+  &:hover {
+    background: var(--surface);
+  }
+}
