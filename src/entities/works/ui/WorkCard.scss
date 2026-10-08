@@ -1,0 +1,31 @@
+@use '../../../shared/sass/abstracts/colors' as *;
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 8px rgba(28, 107, 56, 0.15);
+  }
+
+  .work-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--line);
+  }
+
+  .work-category {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    margin-top: 8px;
+  }
+
+  .work-title {
+    font-weight: 600;
+    margin-top: 4px;
+  }
+}

@@ -2,9 +2,15 @@
 
 .works-section {
   background: var(--bg);
-  min-height: 45vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  padding: 80px 0;
+}
+
+.works-section h2 {
+  margin-bottom: 40px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
