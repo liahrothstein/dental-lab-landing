@@ -1,4 +1,3 @@
-/* Header styles */
 @use '../../shared/sass/abstracts/colors' as *;
 
 .header {
@@ -47,7 +46,7 @@
 
 .contact-btn {
   a {
-    background: var(--accent);
+    background: var(--grad-shell);
     color: #fff;
     padding: 6px 12px;
     border-radius: 4px;
@@ -60,9 +59,73 @@
   }
 }
 
-/* Mobile hide nav on narrow screens */
-@media (max-width: 600px) {
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.burger__line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .nav {
     display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-menu--open {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+    padding: 16px 20px 24px;
+  }
+
+  .mobile-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    color: var(--text);
+    font-weight: 500;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .mobile-menu .contact-btn a {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--grad-shell);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    border-bottom: none;
   }
 }

@@ -1,8 +1,19 @@
 import './Header.scss';
 
-import React from 'react';
+import { useState } from 'react';
 
-const Header: React.FC = () => {
+const links = [
+  { href: '#works', label: 'Работы' },
+  { href: '#services', label: 'Услуги и цены' },
+  { href: '#about', label: 'О лаборатории' },
+  { href: '#reviews', label: 'Отзывы' },
+  { href: '#team', label: 'Команда' },
+  { href: '#contacts', label: 'Контакты' },
+];
+
+const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="header">
       <div className="logo">
@@ -10,13 +21,40 @@ const Header: React.FC = () => {
       </div>
       <nav className="nav">
         <ul>
-          <li><a href="#works">Работы</a></li>
-          <li><a href="#services">Услуги и цены</a></li>
-          <li><a href="#about">О лаборатории</a></li>
-          <li><a href="#reviews">Отзывы</a></li>
-          <li><a href="#team">Команда</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-          <li className="contact-btn"><a href="#contacts">Связаться</a></li>
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+          <li className="contact-btn">
+            <a href="#contacts">Связаться</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        className="burger"
+        aria-label="Открыть меню"
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span className="burger__line" />
+        <span className="burger__line" />
+        <span className="burger__line" />
+      </button>
+      <nav className={menuOpen ? 'mobile-menu mobile-menu--open' : 'mobile-menu'}>
+        <ul>
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} onClick={() => setMenuOpen(false)}>
+                {link.label}
+              </a>
+            </li>
+          ))}
+          <li className="contact-btn">
+            <a href="#contacts" onClick={() => setMenuOpen(false)}>
+              Связаться
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
