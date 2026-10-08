@@ -1,0 +1,21 @@
+@use 'shared/sass/abstracts/colors' as *;
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.team-card__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: var(--line);
+  border-radius: 8px;
+}
+.team-card__name {
+  font-weight: 600;
+}
+.team-card__position {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}

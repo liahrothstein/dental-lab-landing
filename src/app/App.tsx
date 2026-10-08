@@ -5,7 +5,7 @@ import { ContactsSection } from "../widgets/sections/ContactsSection";
 import HeroSection from '../widgets/sections/HeroSection/HeroSection';
 import { ReviewsSection } from "../widgets/sections/ReviewsSection";
 import { ServicesSection } from "../widgets/sections/ServicesSection";
-import TeamSection from '../widgets/sections/TeamSection/TeamSection';
+import { TeamSection } from "../widgets/sections/TeamSection";
 import WorksSection from '../widgets/sections/WorksSection/WorksSection';
 
 function App() {

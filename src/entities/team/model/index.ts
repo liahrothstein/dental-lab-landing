@@ -1,0 +1,1 @@
+export { photoPlaceholder } from './placeholder';

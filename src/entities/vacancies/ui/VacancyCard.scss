@@ -1,0 +1,17 @@
+@use 'shared/sass/abstracts/colors' as *;
+
+.vacancy-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+}
+.vacancy-card__title {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.vacancy-card__description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
