@@ -3,7 +3,7 @@ import Header from '../widgets/header/Header';
 import { AboutSection } from "../widgets/sections/AboutSection";
 import { ContactsSection } from "../widgets/sections/ContactsSection";
 import HeroSection from '../widgets/sections/HeroSection/HeroSection';
-import ReviewsSection from '../widgets/sections/ReviewsSection/ReviewsSection';
+import { ReviewsSection } from "../widgets/sections/ReviewsSection";
 import { ServicesSection } from "../widgets/sections/ServicesSection";
 import TeamSection from '../widgets/sections/TeamSection/TeamSection';
 import WorksSection from '../widgets/sections/WorksSection/WorksSection';

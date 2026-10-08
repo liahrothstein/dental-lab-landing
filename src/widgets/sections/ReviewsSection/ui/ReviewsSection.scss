@@ -1,0 +1,51 @@
+@use 'shared/sass/abstracts/colors' as *;
+
+.reviews-section {
+  background: var(--surface);
+  padding: 80px 0;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.slider__arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--accent-strong);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  &:hover {
+    background: var(--accent-strong);
+    color: #fff;
+  }
+}
+
+.slider__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--line);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dot--active {
+  background: var(--accent-strong);
+}

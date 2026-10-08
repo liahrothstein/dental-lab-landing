@@ -18,6 +18,9 @@ Reasoning: high
 
 Импорт типов всегда через import type. Обычный import для интерфейсов и типов запрещён.
 
+В JSX при .map() использовать key уникальный по данным (id, slug, email, город), а не индекс массива.
+key={index} и key={idx} запрещены.
+
 Цвета только через CSS custom properties, хардкод запрещён.
 
 SCSS-импорт палитры во всех новых файлах: @use 'shared/sass/abstracts/colors' as *;
