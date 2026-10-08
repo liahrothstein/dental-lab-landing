@@ -1,10 +1,6 @@
-export interface Contacts {
+export interface ContactPoint {
+  city: string;
+  address: string;
   phone: string;
   email: string;
-  address: string;
-  socials: {
-    telegram: string;
-    whatsapp: string;
-    vk: string;
-  };
 }

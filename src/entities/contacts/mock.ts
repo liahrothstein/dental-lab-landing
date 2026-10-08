@@ -1,12 +1,16 @@
-import type { Contacts } from './types';
+import type { ContactPoint } from './types';
 
-export const contactsMock: Contacts = {
-  phone: '+7 (123) 456-78-90',
-  email: 'info@gmslab.ru',
-  address: 'Москва, ул. Тестовая 1, оф. 12',
-  socials: {
-    telegram: '@gmslab',
-    whatsapp: '+7 987 654 321',
-    vk: 'gmslab',
+export const contactsMock: ContactPoint[] = [
+  {
+    city: 'Москва',
+    address: 'ул. Тверская, 12, офис 34',
+    phone: '+7 (900) 123-45-67',
+    email: 'moscow@example.com'
   },
-};
+  {
+    city: 'Нижний Новгород',
+    address: 'пр. Мира, д. 45, офис 7',
+    phone: '+7 (900) 987-65-43',
+    email: 'nizhniy@example.com'
+  }
+];

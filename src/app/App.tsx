@@ -1,7 +1,7 @@
 import Footer from '../widgets/footer/Footer';
 import Header from '../widgets/header/Header';
-import AboutSection from '../widgets/sections/AboutSection/AboutSection';
-import ContactsSection from '../widgets/sections/ContactsSection/ContactsSection';
+import { AboutSection } from "../widgets/sections/AboutSection";
+import { ContactsSection } from "../widgets/sections/ContactsSection";
 import HeroSection from '../widgets/sections/HeroSection/HeroSection';
 import ReviewsSection from '../widgets/sections/ReviewsSection/ReviewsSection';
 import { ServicesSection } from "../widgets/sections/ServicesSection";
