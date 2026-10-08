@@ -4,7 +4,7 @@ import AboutSection from '../widgets/sections/AboutSection/AboutSection';
 import ContactsSection from '../widgets/sections/ContactsSection/ContactsSection';
 import HeroSection from '../widgets/sections/HeroSection/HeroSection';
 import ReviewsSection from '../widgets/sections/ReviewsSection/ReviewsSection';
-import ServicesSection from '../widgets/sections/ServicesSection/ServicesSection';
+import { ServicesSection } from "../widgets/sections/ServicesSection";
 import TeamSection from '../widgets/sections/TeamSection/TeamSection';
 import WorksSection from '../widgets/sections/WorksSection/WorksSection';
 

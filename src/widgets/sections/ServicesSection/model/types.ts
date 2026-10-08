@@ -1,0 +1,1 @@
+export type TabId = 'price' | 'order' | 'tour';

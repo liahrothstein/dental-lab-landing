@@ -1,0 +1,36 @@
+@use '../../../../shared/sass/abstracts/colors' as *;
+
+.services-section {
+  background: var(--surface);
+  padding: 80px 0;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tab {
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 10px 20px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.tab--active {
+  background: var(--accent-strong);
+  color: #fff;
+  border-color: var(--accent-strong);
+}
+
+.download-btn {
+  margin-top: 32px;
+}
+
+.tab-note {
+  color: var(--text-muted);
+}
