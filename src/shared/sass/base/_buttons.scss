@@ -13,11 +13,25 @@
 }
 
 .btn--primary {
-  background: var(--grad-shell);
+  background: linear-gradient(135deg,
+      #1C6B38 0%,
+      #2E8B4A 30%,
+      #6FB25D 50%,
+      #A9A23F 70%,
+      #2E8B4A 100%);
+  background-size: 220% 220%;
+  background-position: 0% 50%;
   color: #fff;
+  transition: background-position 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(28, 107, 56, 0.25);
 
   &:hover {
-    background: var(--accent-strong);
+    background-position: 100% 50%;
+    box-shadow: 0 4px 16px rgba(28, 107, 56, 0.35);
+  }
+
+  &:active {
+    box-shadow: 0 1px 4px rgba(28, 107, 56, 0.3);
   }
 }
 

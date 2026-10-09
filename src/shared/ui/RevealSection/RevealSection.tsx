@@ -1,7 +1,8 @@
 import './RevealSection.scss';
 
-import { useReveal } from '@hooks';
 import type { ReactNode } from 'react';
+
+import { useReveal } from '../../lib/hooks';
 
 interface RevealSectionProps {
   id: string;

@@ -4,7 +4,7 @@ const Footer: React.FC = () => (
   <footer className="footer">
     <div className="footer-content">
       <div className="footer-col logo-col">
-        <div className="logo">AURUM <span className="lab">LAB</span></div>
+        <div className="logo">GMS <span className="lab">LAB</span></div>
         <div className="tagline">Авторская зуботехническая лаборатория</div>
       </div>
       <div className="footer-col contacts-col">

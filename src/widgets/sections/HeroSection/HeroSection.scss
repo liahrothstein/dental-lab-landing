@@ -13,4 +13,11 @@
   .accent {
     color: var(--accent-strong);
   }
+
+  .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
 }

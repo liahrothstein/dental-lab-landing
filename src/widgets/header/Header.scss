@@ -49,18 +49,22 @@
   }
 }
 
-.contact-btn {
-  a {
-    background: var(--grad-shell);
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-weight: 600;
-    text-transform: uppercase;
+.nav ul .contact-btn a {
+  background: var(--grad-shell);
+  background-size: 220% 220%;
+  background-position: 0% 50%;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background-position 0.6s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(28, 107, 56, 0.25);
 
-    &:hover {
-      background: var(--accent-strong);
-    }
+  &:hover {
+    background-position: 100% 50%;
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(28, 107, 56, 0.35);
   }
 }
 

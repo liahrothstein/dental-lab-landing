@@ -36,6 +36,21 @@
       ],
       "@widgets/*": [
         "./src/widgets/*"
+      ],
+      "@constants/*": [
+        "./src/shared/consts/*"
+      ],
+      "@hooks/*": [
+        "./src/shared/lib/hooks*"
+      ],
+      "@hooks*": [
+        "./src/shared/lib/hooks*"
+      ],
+      "@features": [
+        "./src/features"
+      ],
+      "@features/*": [
+        "./src/features/*"
       ]
     }
   },
