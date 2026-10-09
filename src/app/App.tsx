@@ -1,3 +1,4 @@
+import { useReveal } from "../shared/lib/hooks";
 import Footer from '../widgets/footer/Footer';
 import Header from '../widgets/header/Header';
 import { AboutSection } from "../widgets/sections/AboutSection";
@@ -9,6 +10,7 @@ import { TeamSection } from "../widgets/sections/TeamSection";
 import WorksSection from '../widgets/sections/WorksSection/WorksSection';
 
 function App() {
+  useReveal();
   return (
     <div className="app">
       <Header />

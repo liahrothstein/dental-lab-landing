@@ -5,7 +5,7 @@ import { vacanciesMock, VacancyCard } from '@entities/vacancies';
 
 export function TeamSection() {
   return (
-    <section id="team" className="team-section">
+    <section id="team" className="team-section" data-reveal>
       <div className="container">
         <h2>Команда</h2>
         <div className="team-grid">

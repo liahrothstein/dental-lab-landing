@@ -9,7 +9,7 @@ export function ServicesSection() {
   const [activeTab, setActiveTab] = useState<TabId>('price');
 
   return (
-    <section id="services" className="services-section">
+    <section id="services" className="services-section" data-reveal>
       <div className="container">
         <h2>Услуги и цены</h2>
 

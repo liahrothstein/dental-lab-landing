@@ -4,7 +4,7 @@ import React from 'react';
 
 const HeroSection: React.FC = function () {
   return (
-    <section id="hero">
+    <section id="hero" data-reveal>
       <div className="container">
         <h1>
           Авторская зуботехническая лаборатория <span className="accent">GMS LAB</span>

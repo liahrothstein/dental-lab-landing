@@ -6,7 +6,7 @@ import React from 'react';
 
 export const ContactsSection: React.FC = () => {
   return (
-    <section className="contacts-section" id="contacts">
+    <section className="contacts-section" id="contacts" data-reveal>
       <div className="container">
         <h2>Контакты</h2>
         <div className="contacts-section__grid">

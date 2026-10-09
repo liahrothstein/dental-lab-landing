@@ -1,6 +1,6 @@
 import './Header.scss';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const links = [
   { href: '#works', label: 'Работы' },
@@ -13,6 +13,26 @@ const links = [
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
+
+  useEffect(() => {
+    const ids = ['hero', 'works', 'services', 'about', 'reviews', 'team', 'contacts'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    ids.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="header">
@@ -23,11 +43,18 @@ const Header = () => {
         <ul>
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href}>{link.label}</a>
+              <a
+                href={link.href}
+                className={activeSection === link.href.slice(1) ? 'active' : ''}
+              >
+                {link.label}
+              </a>
             </li>
           ))}
           <li className="contact-btn">
-            <a href="#contacts">Связаться</a>
+            <a href="#contacts" className={activeSection === 'contacts' ? 'active' : ''}>
+              Связаться
+            </a>
           </li>
         </ul>
       </nav>
@@ -45,13 +72,21 @@ const Header = () => {
         <ul>
           {links.map((link) => (
             <li key={link.href}>
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
+              <a
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={activeSection === link.href.slice(1) ? 'active' : ''}
+              >
                 {link.label}
               </a>
             </li>
           ))}
           <li className="contact-btn">
-            <a href="#contacts" onClick={() => setMenuOpen(false)}>
+            <a
+              href="#contacts"
+              onClick={() => setMenuOpen(false)}
+              className={activeSection === 'contacts' ? 'active' : ''}
+            >
               Связаться
             </a>
           </li>

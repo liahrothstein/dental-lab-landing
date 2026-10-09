@@ -5,7 +5,7 @@ import React from 'react';
 
 export const AboutSection: React.FC = () => {
   return (
-    <section className="about-section" id="about">
+    <section className="about-section" id="about" data-reveal>
       <div className="container">
         <h2>{aboutMock.title}</h2>
         {aboutMock.paragraphs.map((para, idx) => (

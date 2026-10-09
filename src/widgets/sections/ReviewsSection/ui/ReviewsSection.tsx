@@ -7,7 +7,7 @@ import { useReviewsSlider } from '../model';
 export function ReviewsSection() {
   const { index, current, next, prev, goTo } = useReviewsSlider(reviewsMock);
   return (
-    <section id="reviews" className="reviews-section">
+    <section id="reviews" className="reviews-section" data-reveal>
       <div className="container">
         <h2>Отзывы</h2>
         <div className="slider">
