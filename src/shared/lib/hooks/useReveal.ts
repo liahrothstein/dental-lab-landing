@@ -3,6 +3,12 @@ import { useEffect } from 'react';
 export function useReveal() {
   useEffect(() => {
     const elements = document.querySelectorAll('[data-reveal]');
+
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach((el) => el.classList.add('revealed'));
+      return;
+    }
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -14,6 +20,7 @@ export function useReveal() {
       },
       { threshold: 0.15 }
     );
+
     elements.forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);

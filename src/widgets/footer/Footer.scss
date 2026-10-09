@@ -18,13 +18,26 @@
 .footer-col {
   flex: 1 1 200px;
   margin: 10px 0;
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+  }
 }
 
-.logo {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--text-muted);
+.contacts-col {
+  a {
+    color: var(--text-on-dark, #F0EDE6);
+    text-decoration: none;
+    display: block;
+    margin: 4px 0;
+
+    &:hover {
+      color: var(--accent-gold);
+    }
+  }
 }
 
 .logo .lab {

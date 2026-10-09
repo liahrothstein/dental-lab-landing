@@ -33,9 +33,13 @@ export function ServicesSection() {
                   <ServiceRow key={service.id} service={service} />
                 ))}
               </div>
-              <a href="#" className="btn btn--primary download-btn">
+              <button
+                type="button"
+                className="btn btn--primary download-btn"
+                onClick={() => alert('Прайс-лист готовится. Позвоните нам — вышлем PDF первым.')}
+              >
                 Скачать прайс (PDF)
-              </a>
+              </button>
             </>
           )}
 

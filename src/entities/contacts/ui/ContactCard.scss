@@ -5,15 +5,28 @@
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 24px;
+
   &__city {
     font-weight: 600;
     color: var(--accent-strong);
     margin: 0 0 8px 0;
   }
-  &__address,
-  &__phone,
-  &__email {
+
+  &__address {
     color: var(--text-muted);
     margin: 4px 0;
+  }
+
+  &__phone,
+  &__email {
+    display: block;
+    color: var(--text-muted);
+    margin: 4px 0;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--accent-strong);
+    }
   }
 }

@@ -1,38 +1,13 @@
 import './Header.scss';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-const links = [
-  { href: '#works', label: 'Работы' },
-  { href: '#services', label: 'Услуги и цены' },
-  { href: '#about', label: 'О лаборатории' },
-  { href: '#reviews', label: 'Отзывы' },
-  { href: '#team', label: 'Команда' },
-  { href: '#contacts', label: 'Контакты' },
-];
+import { useActiveSection } from './model';
+import { links } from './model/links';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('');
-
-  useEffect(() => {
-    const ids = ['hero', 'works', 'services', 'about', 'reviews', 'team', 'contacts'];
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
-    ids.forEach((id) => {
-      const el = document.getElementById(id);
-      if (el) observer.observe(el);
-    });
-    return () => observer.disconnect();
-  }, []);
+  const activeSection = useActiveSection();
 
   return (
     <header className="header">

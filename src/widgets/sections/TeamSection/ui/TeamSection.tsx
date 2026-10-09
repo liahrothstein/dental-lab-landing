@@ -22,13 +22,13 @@ export function TeamSection() {
         </div>
       </div>
 
-      <div className="team-cta">
+      <aside className="team-cta">
         <div className="container">
           <h2>Хотите сотрудничать?</h2>
           <p className="team-cta__text">Напишите нам — обсудим вашу задачу.</p>
           <a href="#contacts" className="btn btn--primary">Написать</a>
         </div>
-      </div>
+      </aside>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import { useReveal } from "../shared/lib/hooks";
-import Footer from '../widgets/footer/Footer';
+import { Footer } from '../widgets/footer/Footer';
 import Header from '../widgets/header/Header';
 import { AboutSection } from "../widgets/sections/AboutSection";
 import { ContactsSection } from "../widgets/sections/ContactsSection";
@@ -14,13 +14,15 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <HeroSection />
-      <WorksSection />
-      <ServicesSection />
-      <AboutSection />
-      <ReviewsSection />
-      <TeamSection />
-      <ContactsSection />
+      <main>
+        <HeroSection />
+        <WorksSection />
+        <ServicesSection />
+        <AboutSection />
+        <ReviewsSection />
+        <TeamSection />
+        <ContactsSection />
+      </main>
       <Footer />
     </div>
   );
