@@ -11,6 +11,8 @@
   gap: 16px;
   text-align: center;
   max-width: 560px;
+  flex: 1 1 auto;
+  min-width: 0;
 
   &__avatar {
     width: 64px;
