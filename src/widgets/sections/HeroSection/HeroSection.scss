@@ -11,7 +11,10 @@
   text-align: center;
 
   .accent {
-    color: var(--accent-strong);
+    background: var(--grad-shell);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   .buttons {
@@ -19,5 +22,25 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
+    margin-top: 15px;
+  }
+
+  .hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 56px;
+  }
+
+  .hero-badge__value {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--accent-strong);
+  }
+
+  .hero-badge__label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 }

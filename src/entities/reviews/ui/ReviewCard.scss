@@ -39,4 +39,12 @@
     color: var(--text-muted);
     font-size: 0.875rem;
   }
+
+  &::before {
+    content: '“';
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    line-height: 0.6;
+    color: var(--accent-gold);
+  }
 }

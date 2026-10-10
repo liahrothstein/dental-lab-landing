@@ -1,5 +1,6 @@
 import './HeroSection.scss';
 
+import { aboutMock } from '@entities/about';
 import React from 'react';
 
 const HeroSection: React.FC = function () {
@@ -19,6 +20,14 @@ const HeroSection: React.FC = function () {
           <a className="btn btn--outline" href="#works">
             Примеры работ
           </a>
+        </div>
+        <div className="hero-badges">
+          {aboutMock.stats.map((stat) => (
+            <div key={stat.label} className="hero-badge">
+              <span className="hero-badge__value">{stat.value}</span>
+              <span className="hero-badge__label">{stat.label}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

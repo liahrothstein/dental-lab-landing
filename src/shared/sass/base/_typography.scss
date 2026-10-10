@@ -27,6 +27,15 @@ h2 {
   letter-spacing: 0.02em;
   color: var(--text);
   margin: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 2px;
+    background: var(--grad-shell);
+    margin-bottom: 16px;
+  }
 }
 
 // Utility container class for centered content

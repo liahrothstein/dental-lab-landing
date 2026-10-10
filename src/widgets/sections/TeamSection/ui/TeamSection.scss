@@ -34,6 +34,10 @@
 
   h2 {
     color: #F0EDE6;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
